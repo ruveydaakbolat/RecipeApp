@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 3px 8px;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "poppins";
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: grid;
+  padding: 0 20px;
+  background: #f9f5f3;
+  grid-template-areas: "logo search likes";
+}
+@media (max-width: 700px) {
+  header {
+    grid-template-areas: "logo likes" "search search";
+  }
+}
+header .logo {
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+}
+header .logo img {
+  height: 100px;
+}
+header .form {
+  grid-area: search;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 700px) {
+  header .form {
+    margin-bottom: 30px;
+  }
+}
+header .form form {
+  background: white;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+  overflow: hidden;
+  box-shadow: 0px 20px 20px -10px rgba(38, 57, 77, 0.359);
+}
+header .form form:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0px 20px 30px -10px rgb(38, 57, 77);
+}
+header .form form input {
+  font-size: 19px;
+  padding: 8px 16px;
+}
+@media (max-width: 700px) {
+  header .form form input {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+}
+header .form form input::-moz-placeholder {
+  color: #dad0cc;
+}
+header .form form input::placeholder {
+  color: #dad0cc;
+}
+header .form form button {
+  border-radius: 40px;
+  padding: 10px 30px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-image: linear-gradient(45deg, #fbda61 30%, #ff5acd 100%);
+}
+header .form form button:hover {
+  scale: 0.95;
+}
+header .bookmark {
+  grid-area: likes;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: 25px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  flex: 1;
+}
+@media (max-width: 1200px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+section {
+  height: 100%;
+}
+
+main #results {
+  display: flex;
+  flex-direction: column;
+}
+main #results .result-link {
+  background: white;
+  border-top: 2px solid white;
+  padding: 20px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s;
+}
+main #results .result-link:hover {
+  transform: translateY(-2px);
+  background: #f9f5f3;
+}
+main #results .result-link img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+main #results .result-link h4 {
+  color: #fbda61;
+}/*# sourceMappingURL=style.css.map */

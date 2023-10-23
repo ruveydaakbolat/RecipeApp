@@ -1,0 +1,13 @@
+# Kaynaklar
+
+- Api: https://forkify-api.herokuapp.com/
+
+- Arama: https://forkify-api.herokuapp.com/api/search?q=pizza={{ARAMA TERIMI}}
+
+- Detay: https://forkify-api.herokuapp.com/api/get?rId={{ID DEGERI}}
+
+- Desteklenen Kategoriler: https://forkify-api.herokuapp.com/phrases.html
+
+Yapılacaklar
+
+- Kullanıcı ilk girdiğinde rastgele bir kategoriye istek at ve sonuçları listele
