@@ -1,6 +1,10 @@
 export const ele = {
   form: document.querySelector("form"),
   result_list: document.querySelector("#results"),
+  recipeArea: document.querySelector('#recipe'),
+  like_list: document.querySelector('#like-list'),
+  basket_list: document.querySelector('#basket'),
+  clear: document.querySelector('#clear'),
 };
 
 export const renderLoader = (outlet) => {
@@ -40,3 +44,12 @@ export const renderResults = (results) => {
     `
   );
 };
+
+export const renderBasketItems = (basket) => {
+    ele.basket_list.innerHTML = basket.map((item) => `
+        <li data-id=${item.id}>
+            <i id="delete-item" class="bi bi-x"></i>
+            <span>${item.title}</span>
+        </li>
+    `).join(' ');
+}

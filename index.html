@@ -19,7 +19,7 @@
     <header>
       <div class="logo">
         <a href="/">
-          <img src="/images/indir2.png" />
+          <img src="/images/food-logo.png" />
         </a>
       </div>
 
@@ -27,21 +27,30 @@
         <form>
           <input placeholder="örn:pizza,bbq" type="search" />
           <button>
-            <i></i>
             <span>Ara</span>
           </button>
         </form>
       </div>
 
       <div class="bookmark">
-        <i class="bi bi-bookmark-heart-fill"></i>
+        
+        <div class="paste-button">
+          <button class="button"><i class="bi bi-bookmark-heart-fill"></i></button>
+          <div id="like-list" class="dropdown-content"></div>
+        </div>        
       </div>
     </header>
 
     <main>
       <section id="results"></section>
-      <section id="recipe">tarif detay</section>
-      <section id="cart">sepet</section>
+      <section id="recipe"></section>
+      <section id="cart">
+        <div>
+          <h2>Sepet</h2>
+          <button id="clear">Temizle</button>
+        </div>
+        <ul id="basket"></ul>
+      </section>
     </main>
 
     <script
